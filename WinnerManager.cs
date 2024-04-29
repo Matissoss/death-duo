@@ -37,5 +37,11 @@ public class WinnerManager : MonoBehaviour
             Debug.Log("End! :)");
             SceneManager.LoadScene("Game");
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.SetInt("Player1Score", 0);
+            PlayerPrefs.SetInt("Player2Score", 0);
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
